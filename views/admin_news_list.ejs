@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ニュース管理 - 一覧</title>
+  <link rel="stylesheet" href="/css/news_list.css" />
+</head>
+<body>
+  <h1>ニュース管理 - 一覧</h1>
+  <p><a href="/admin/news/new">新規ニュース追加</a></p>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>ID</th><th>タイトル</th><th>日付</th><th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% news.forEach(item => { %>
+      <tr>
+        <td><%= item.id %></td>
+        <td><a href="<%= item.url %>" target="_blank" rel="noopener noreferrer"><%= item.title %></a></td>
+        <td><%= item.date %></td>
+        <td>
+          <a href="/admin/news/edit/<%= item.id %>">編集</a>
+          <form action="/admin/news/delete/<%= item.id %>" method="POST" style="display:inline" onsubmit="return confirm('削除してよいですか？');">
+            <button type="submit">削除</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <p><a href="/">トップページに戻る</a></p>
+</body>
+</html>

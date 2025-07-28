@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title><%= news ? 'ニュース編集' : '新規ニュース追加' %></title>
+  <link rel="stylesheet" href="/css/news_form.css" />
+</head>
+<body>
+  <h1><%= news ? 'ニュース編集' : '新規ニュース追加' %></h1>
+
+  <form action="/admin/news/save" method="POST">
+    <% if (news) { %>
+      <input type="hidden" name="id" value="<%= news.id %>" />
+    <% } %>
+
+    <p>
+      <label>タイトル<br />
+        <input type="text" name="title" value="<%= news ? news.title : '' %>" required />
+      </label>
+    </p>
+
+    <p>
+      <label>本文<br />
+        <textarea name="body" rows="10" placeholder="本文を入力してください..." required><%= news ? news.body : '' %></textarea>
+      </label>
+    </p>
+
+    <p>
+      <label>日付（例：2025-07-28）<br />
+        <input type="date" name="date" value="<%= news ? news.date : '' %>" required />
+      </label>
+    </p>
+
+    <p>
+      <button type="submit">保存</button>
+      <a href="/admin/news">キャンセル</a>
+    </p>
+  </form>
+</body>
+</html>

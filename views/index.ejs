@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= vtuber.name %> - Vtuber紹介</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="vtuber-header">
+      <div class="image-wrapper">
+        <img src="<%= vtuber.header %>" alt="Header Image" />
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+    <section class="profile">
+      <img
+        class="avatar"
+        src="<%= vtuber.image %>"
+        alt="<%= vtuber.name %>のアバター"
+      />
+      <div class="profile-info">
+        <h2>プロフィール</h2>
+        <ul>
+          <li><strong>名前:</strong> <%= vtuber.name %></li>
+          <li><strong>誕生日:</strong> <%= vtuber.birthday %></li>
+          <li><strong>ファンマーク:</strong> <%= vtuber.fanMark %></li>
+          <li><strong>好きなもの:</strong> <%= vtuber.likes %></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="videos">
+      <h2>💫 直近の配信、動画</h2>
+      <div class="video-list">
+        <% vtuber.videos.forEach(video => { %>
+          <div class="video-item">
+            <a
+              href="https://www.youtube.com/watch?v=<%= video.videoId %>"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="<%= video.thumbnail %>" alt="<%= video.title %>" />
+              <p class="video-title"><%= video.title %></p>
+            </a>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+<section class="news-section">
+  <h2>最新ニュース</h2>
+  <div class="news-list">
+    <% vtuber.news.forEach(n => { %>
+      <article class="news-item">
+        <h3 class="news-title"><%= n.title %></h3>
+        <time class="news-date"><%= n.date %></time>
+        <p class="news-body"><%= n.body %></p>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+    <section class="social-media">
+      <div class="social-links">
+        <h2>🤖 Social Media</h2>
+        <ul>
+          <li>
+            <a href="<%= vtuber.youtube %>" target="_blank"
+              ><i class="fab fa-youtube"></i> YouTube</a
+            >
+          </li>
+          <li>
+            <a href="<%= vtuber.twitter %>" target="_blank"
+              ><i class="fab fa-twitter"></i> Twitter</a
+            >
+          </li>
+          <li>
+            <a href="<%= vtuber.fanbox %>" target="_blank"
+              ><i class="fas fa-heart"></i> FANBOX</a
+            >
+          </li>
+          <li>
+            <a href="<%= vtuber.booth %>" target="_blank"
+              ><i class="fas fa-store"></i> BOOTH</a
+            >
+          </li>
+          <li>
+            <a href="<%= vtuber.tsunagu %>" target="_blank"
+              ><i class="fas fa-link"></i>つなぐ</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="hashtags">
+        <h2>🍾 Hashtags</h2>
+        <div class="hashtag-list">
+          <a href="https://x.com/hashtag/<%= vtuber.fanArtHashtag %>"
+            ><%= vtuber.fanArtHashtag %></a
+          >
+          <a href="https://x.com/hashtag/<%= vtuber.fanHashTag %>"
+            ><%= vtuber.fanHashTag %></a
+          >
+          <a href="https://x.com/hashtag/<%= vtuber.liveHashTag %>"
+            ><%= vtuber.liveHashTag %></a
+          >
+          <a href="https://x.com/hashtag/<%= vtuber.IntegratedHashTag %>"
+            ><%= vtuber.IntegratedHashTag %></a
+          >
+        </div>
+      </div>
+
+      <div class="SpecialThanks">
+        <h2>🌟 Special Thanks</h2>
+        <p>
+          キャラクターデザイン: NOU4様
+          <a
+            href="https://x.com/nou4_777"
+            target="_blank"
+            class="twitter-icon"
+            aria-label="NOU4様のX(Twitter)"
+          >
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>© <%= new Date().getFullYear() %> 超高性能AIアイドルアル 非公式ファンサイト. All rights reserved.</p>
+      <p>★超高性能AIアイドルアルの⾮公式ファンサイトです。</p>
+      <p>★当サイトで使⽤している画像の著作権・肖像権等は各権利者に帰属いたします。</p>
+    </footer>
+  </body>
+</html>

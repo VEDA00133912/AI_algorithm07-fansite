@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px 40px;
+}
+
+h1 {
+  color: #5985de;
+  border-bottom: 2px solid #6596e3;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #5985de;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #f49a2a;
+  text-decoration: underline;
+}
+
+p {
+  margin: 16px 0;
+  font-size: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #d1cce3;
+}
+
+thead th {
+  color: #3b3b5c;
+  text-align: left;
+  padding: 12px 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #b0abc0;
+}
+
+tbody tr {
+  border-bottom: 1px solid #d1cce3;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f0f2fa;
+}
+
+tbody td {
+  padding: 12px 15px;
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+button {
+  background-color: #f49a2a;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d1771f;
+}
+
+form {
+  display: inline;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 15px;
+    padding: 0 10px 30px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  thead th, tbody td {
+    padding: 10px 8px;
+  }
+
+  button {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+}
