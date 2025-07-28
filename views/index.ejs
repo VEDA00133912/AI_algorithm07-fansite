@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= vtuber.name %> - Vtuber紹介</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= vtuber.name %> - 非公式ファンサイト</title>
+
+  <meta name="description" content="<%= vtuber.name %> の非公式ファンサイトです" />
+  <meta name="keywords" content="AIアイドル, <%= vtuber.name %>, Vtuber, 非公式ファンサイト, ファンサイト" />
+  <meta name="author" content="りょう" />
+  <meta name="theme-color" content="#5985de" />
+
+  <link rel="icon" href="<%= vtuber.icon %>" type="image/png" />
+  <link rel="apple-touch-icon" href="<%= vtuber.icon %>" type="image/png" />
+
+  <meta property="og:title" content="<%= vtuber.name %> - 非公式ファンサイト" />
+  <meta property="og:description" content="<%= vtuber.name %> の非公式ファンサイトです" />
+  <meta property="og:image" content="https://your-site-url.com/static/assets/img/og-image.png" />
+  <meta property="og:url" content="https://ai-algorithm0731-fansite.onrender.com/" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= vtuber.name %> - 非公式ファンサイト" />
+  <meta name="twitter:description" content="<%= vtuber.name %> のファンサイト" />
+  <meta name="twitter:image" content="https://your-site-url.com/static/assets/img/og-image.png" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
   <body>
     <header class="vtuber-header">
       <div class="image-wrapper">
