@@ -4,7 +4,7 @@
 ![og-image](./public/images/og-image.png)
 
 ## 各リンク
-サイトリンク→ https://ai-algorithm0731-fansite.onrender.com/<br>
+サイトリンク→ https://ai_algorithm07-fansite.onrender.com/<br>
 Youtube→ https://youtube.com/@ai_algorithm0731<br>
 Twitter→ https://x.com/AI_algorithm07<br>
 
