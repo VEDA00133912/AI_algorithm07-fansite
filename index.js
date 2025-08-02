@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const getLatestVideos = require('./getLatestVideos');
 const basicAuth = require('./basicAuth');
+const autoLink = require('./convertLink')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -35,7 +36,12 @@ app.get('/', async (req, res) => {
   const vtuber = JSON.parse(fs.readFileSync('./data/vtuber_info.json', 'utf8'));
   
   const videos = await getLatestVideos();
-  const news = getLatestNews();
+  const newsRaw = getLatestNews();
+
+  const news = newsRaw.map(item => ({
+    ...item,
+    body: autoLink(item.body)
+  }));
 
   vtuber.videos = videos;
   vtuber.news = news;
