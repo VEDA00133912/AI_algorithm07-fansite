@@ -4,9 +4,9 @@ const path = require('path');
 const Database = require('better-sqlite3');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const getLatestVideos = require('./getLatestVideos');
-const basicAuth = require('./basicAuth');
-const autoLink = require('./convertLink')
+const getLatestVideos = require('./utils/getLatestVideos');
+const basicAuth = require('./utils/basicAuth');
+const autoLink = require('./utils/convertLink')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
