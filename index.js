@@ -43,6 +43,7 @@ app.get('/', async (req, res) => {
     body: autoLink(item.body)
   }));
 
+  vtuber.introduction = vtuber.introduction.replace(/\n/g, "<br>");
   vtuber.videos = videos;
   vtuber.news = news;
 

@@ -1,13 +1,13 @@
 # AI_algorithm07-fansite
-**★超高性能AIアイドルアルの⾮公式ファンサイトです**<br>
-**★当サイトで使⽤している画像の著作権・肖像権等は各権利者に帰属いたします**<br><br>
+**★超高性能AIアイドルアルの⾮公式ファンサイトです**  
+**★当サイトで使⽤している画像の著作権・肖像権等は各権利者に帰属いたします**    
 ![og-image](./public/images/og-image.png)
 
 ## 🔗 各リンク
-アルに関するリンクです<br>
-サイトリンク→ https://ai-algorithm07-fansite.onrender.com <br>
-Youtube→ https://youtube.com/@ai_algorithm0731 <br>
-Twitter→ https://x.com/AI_algorithm07 <br>
+アルに関するリンクです  
+サイトリンク→ https://ai-algorithm07-fansite.onrender.com   
+Youtube→ https://youtube.com/@ai_algorithm0731   
+Twitter→ https://x.com/AI_algorithm07   
 
 ## 🚀 技術スタック
 
@@ -111,7 +111,6 @@ npm start
   "likes": "好きなもの",
   "youtube": "YouTubeチャンネルURL",
   "twitter": "TwitterURL",
-  // その他の設定...
 }
 ```
 
